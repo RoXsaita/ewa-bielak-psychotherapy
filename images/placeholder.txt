@@ -1,0 +1,7 @@
+This is a placeholder file to ensure the images directory is created in the repository.
+
+Required images:
+1. profile.jpg - A professional photo of Ewa Bielak (recommended size: 600x800px)
+2. favicon.png - Website icon (recommended size: 32x32px)
+
+Please replace these with actual images before publishing the website. 

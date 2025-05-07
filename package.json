@@ -1,0 +1,21 @@
+{
+  "name": "ewa-bielak-psychotherapy",
+  "version": "1.0.0",
+  "description": "Website for Ewa Bielak's psychotherapy practice",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "psychotherapy",
+    "website",
+    "static"
+  ],
+  "author": "Ewa Bielak",
+  "license": "UNLICENSED",
+  "private": true,
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 

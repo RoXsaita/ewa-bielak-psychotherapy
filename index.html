@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Certyfikowany psychoterapeuta specjalizujący się w leczeniu depresji, lęku i problemów z relacjami.">
+    <title>Ewa Bielak - Psychoterapia dla lepszego życia</title>
+    
+    <!-- Meta tags for social sharing -->
+    <meta property="og:title" content="Ewa Bielak - Psychoterapia dla lepszego życia">
+    <meta property="og:description" content="Certyfikowany psychoterapeuta specjalizujący się w leczeniu depresji, lęku i problemów z relacjami.">
+    <meta property="og:image" content="images/profile.jpg">
+    <meta property="og:url" content="https://ewabielak.pl">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/language-toggle.css">
+    <link rel="stylesheet" href="css/premium-design.css">
+    
+    <!-- Force consistent video appearance -->
+    <style>
+        /* Critical styles to prevent brightness changes on scroll */
+        .hero-video-container video {
+            opacity: 1 !important; 
+            transition: none !important;
+            filter: none !important;
+            -webkit-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+            transform: translate(-50%, -50%) !important;
+            -webkit-transform: translate(-50%, -50%) !important;
+        }
+        
+        .hero-video-overlay {
+            background: rgba(255,255,255,0.2) !important;
+            transition: none !important;
+            opacity: 1 !important;
+        }
+        
+        /* Apply these styles for all possible states */
+        html.scrolling .hero-video-overlay,
+        body.scrolling .hero-video-overlay,
+        .hero:hover .hero-video-overlay {
+            background: rgba(255,255,255,0.2) !important;
+            opacity: 1 !important;
+        }
+        
+        /* iOS Safari specific fix */
+        @supports (-webkit-touch-callout: none) {
+            .hero-video-container {
+                z-index: -1 !important;
+            }
+            .hero-video-overlay {
+                z-index: -1 !important;
+            }
+        }
+        
+        /* Enhanced text visibility for hero section */
+        .hero-name {
+            color: #000000 !important; /* Pure black for maximum contrast */
+            font-weight: 800 !important; /* Extra bold */
+            text-shadow: 0 1px 2px rgba(255,255,255,0.3) !important; /* Subtle text shadow */
+            letter-spacing: -0.02em !important; /* Tighter letter spacing for bolder appearance */
+        }
+        
+        .hero-tagline {
+            color: #111827 !important; /* Very dark gray, almost black */
+            font-weight: 600 !important; /* Semi-bold */
+            text-shadow: 0 1px 2px rgba(255,255,255,0.3) !important;
+            max-width: 90% !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            line-height: 1.4 !important;
+        }
+        
+        /* Add a subtle contrast boost to the buttons */
+        .hero-buttons .btn-primary {
+            font-weight: 700 !important;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15) !important;
+        }
+        
+        .hero-buttons .btn-secondary {
+            font-weight: 700 !important;
+            color: #1a365d !important; /* Darker blue */
+            border-color: #1a365d !important;
+        }
+    </style>
+    
+    <style>
+        /* Hide the non-active language content */
+        html[lang="en"] [data-lang="pl"],
+        html[lang="pl"] [data-lang="en"] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Language toggle in pill style -->
+    <div class="language-toggle-container">
+        <div class="language-toggle-pill">
+            <button id="pl-button" class="language-btn active">PL</button>
+            <button id="en-button" class="language-btn">EN</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-video-container">
+            <video autoplay muted loop playsinline>
+                <source src="images/Serenity.mp4" type="video/mp4">
+            </video>
+            <div class="hero-video-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1 class="hero-name" data-i18n="hero.name">Ewa Bielak</h1>
+                <p class="hero-tagline" data-i18n="hero.tagline">
+                    Certyfikowany psychoterapeuta specjalizujący się w leczeniu depresji, lęku i problemów z relacjami.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary" data-i18n="hero.cta">Umów konsultację</a>
+                    <a href="#about" class="btn btn-secondary" data-i18n="hero.learnMore">Dowiedz się więcej</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title slide-up" data-i18n="about.title">O mnie</h2>
+            <div class="about-content">
+                <div class="about-image slide-up">
+                    <img src="images/profile.jpg" alt="Ewa Bielak, Psychoterapeutka"
+                         data-i18n-attr="alt"
+                         data-i18n="about.imageAlt">
+                </div>
+                <div class="about-text slide-up">
+                    <p data-i18n="about.bio1">
+                        Jestem psycholożką z tytułem magistra zdobytym na Uniwersytecie im. Adama Mickiewicza w Poznaniu…
+                    </p>
+                    <p data-i18n="about.bio2">
+                        W relacji z klientami kluczowe są dla mnie autentyczność, empatia i bezwarunkowa akceptacja…
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualifications Section -->
+    <section id="qualifications" class="qualifications-section">
+        <div class="container">
+            <h2 class="section-title slide-up" data-i18n="qualifications.title">Kwalifikacje</h2>
+            <div class="qualifications-container slide-up">
+                <div class="qualifications-grid">
+                    <!-- Dynamically populated via translations.js -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title slide-up" data-i18n="services.title">Oferta terapii</h2>
+            <p class="section-subtitle slide-up" data-i18n="services.subtitle">
+                Oferuję różnorodne usługi terapeutyczne dostosowane do indywidualnych potrzeb każdego klienta
+            </p>
+            <div class="services-cards">
+                <!-- Dynamically populated via translations.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title slide-up" data-i18n="testimonials.title">Opinie klientów</h2>
+            <p class="section-subtitle slide-up" data-i18n="testimonials.subtitle">
+                Co mówią osoby, którym pomogłam w procesie terapeutycznym
+            </p>
+            <div class="testimonial-wrapper slide-up">
+                <div class="testimonial-grid">
+                    <!-- Dynamically populated via translations.js -->
+                </div>
+                <!-- Keep the carousel for compatibility with JS -->
+                <div class="testimonials-carousel" style="display:none;"></div>
+                <div class="testimonial-credit">
+                    <p data-i18n="testimonials.creditLine"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title slide-up" data-i18n="contact.title">Kontakt</h2>
+            <p class="section-subtitle slide-up" data-i18n="contact.subtitle">
+                Skontaktuj się ze mną, aby umówić pierwszą konsultację lub zadać pytania
+            </p>
+            <div class="contact-container slide-up">
+                <div class="contact-image-wrapper">
+                    <img src="images/Fire-down.png" alt="Flame illustration" class="contact-image">
+                </div>
+                <div class="contact-details">
+                    <h3 data-i18n="contact.directContactTitle">Dane kontaktowe</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h4 data-i18n="contact.phoneTitle">Telefon</h4>
+                            <a href="tel:+48692571247">+48 692 571 247</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h4 data-i18n="contact.emailTitle">Email</h4>
+                            <a href="mailto:Ewabielak.psychoterapia@gmail.com">Ewabielak.psychoterapia@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h4 data-i18n="contact.scheduleTitle">Godziny pracy</h4>
+                            <p data-i18n="contact.scheduleText">Poniedziałek - Piątek: 9:00 - 19:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h4 data-i18n="contact.locationTitle">Lokalizacja</h4>
+                            <address>
+                                <p data-i18n="contact.addressLine1">Familijna 8, Trablice</p>
+                                <p data-i18n="contact.addressLine2">NIP: 9482552919</p>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <h3 data-i18n="hero.name">Ewa Bielak</h3>
+                    <p data-i18n="hero.subtitle">Psychoterapia dla lepszego życia</p>
+                    <div class="social-icons">
+                        <a href="https://www.znanylekarz.pl/ewa-bielak/psycholog/warszawa" target="_blank" rel="noopener noreferrer" aria-label="ZnanyLekarz Profile" class="znanylekarz">
+                            <i class="fas fa-user-md" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.instagram.com/ewabielak.psycholozka/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile" class="instagram">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer.quickLinksTitle">Szybkie linki</h4>
+                    <ul>
+                        <li><a href="#about" data-i18n="footer.links.about">O mnie</a></li>
+                        <li><a href="#qualifications" data-i18n="footer.links.qualifications">Kwalifikacje</a></li>
+                        <li><a href="#services" data-i18n="footer.links.services">Oferta terapii</a></li>
+                        <li><a href="#testimonials" data-i18n="footer.links.testimonials">Opinie klientów</a></li>
+                        <li><a href="#contact" data-i18n="footer.links.contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-i18n="footer.contactTitle">Kontakt</h4>
+                    <address>
+                        <p data-i18n="contact.addressLine1">Warszawa, Polska</p>
+                        <p data-i18n="contact.addressLine2">NIP: 9482552919</p>
+                        <p><a href="mailto:Ewabielak.psychoterapia@gmail.com">Email: Ewabielak.psychoterapia@gmail.com</a></p>
+                        <p><a href="tel:+48692571247">Tel: +48 692 571 247</a></p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2024</span> Ewa Bielak. <span data-i18n="footer.rightsReserved">
+                    Wszelkie prawa zastrzeżone.
+                </span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Add intersection observer for animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            // Only run if IntersectionObserver is supported
+            if ('IntersectionObserver' in window) {
+                const elementsToAnimate = document.querySelectorAll('.slide-up');
+                
+                const options = {
+                    root: null,
+                    rootMargin: '0px',
+                    threshold: 0.1
+                };
+                
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.visibility = 'visible';
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, options);
+                
+                elementsToAnimate.forEach(element => {
+                    element.style.visibility = 'hidden';
+                    element.style.opacity = '0';
+                    element.style.transform = 'translateY(20px)';
+                    element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    observer.observe(element);
+                });
+            }
+
+            // Add lazy loading to images
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.setAttribute('loading', 'lazy');
+            });
+        });
+    </script>
+</body>
+</html>
